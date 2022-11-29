@@ -23,11 +23,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="./blog.css">
+	<link rel="stylesheet" href="./preloader.css">
 	
 
 </head>
 
 <body>
+	 <!-- preloader -->
+    <!-- Loader -->
+    <div class="preloader">
+        <div class="blobs">
+            <div class="blob-center"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+  	</filter>
+  </defs>
+</svg>
+    </div>
+    <!-- partial -->
+
    
     <div class="hero-section">
         <div class="about-text ">about</div>
@@ -610,6 +635,14 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 	<script src="js/main.js"></script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        })
+    </script>
+
 
 </body>
 
